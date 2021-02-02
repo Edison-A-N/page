@@ -8,8 +8,6 @@ permalink:        pretty
 title:            Edison's Blog
 tagline:          'Simple Made Easy'
 description:      'Thinking, writing and sharing'
-url:              https://zhangn661.com
-baseurl:          /
 
 author:
   name:           'Edison'
