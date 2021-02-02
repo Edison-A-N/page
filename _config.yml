@@ -7,18 +7,26 @@ permalink:        pretty
 
 # Setup
 title:            Edison's Blog
-tagline:          'A Jekyll theme'
+tagline:          'Simple Made Easy'
 description:      'Thinking, writing and sharing'
-url:              https://zhangn661.com/
+url:              https://zhangn661.com
+baseurl:          /
 
 author:
   name:           'Edison'
-  url:            zhangn661@gmail.com
+  url:            https://zhangn661.com/about
 
 paginate:         5
 
 # Custom vars
 version:          2.1.0
+plugins_dir:
+        - jekyll-paginate
+        - jekyll-gist
+
+# gems: [jekyll-paginate,jekyll-gist,jekyll-twitter-plugin]
+
+# plugins: [jekyll-paginate,jekyll-gist,jekyll-twitter-plugin]
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/Edison-A-N"
