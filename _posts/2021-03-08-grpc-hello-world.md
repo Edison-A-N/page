@@ -44,7 +44,6 @@ service Greeter {
 message HelloRequest {
   string name = 1;
 }
-
 // The response message containing the greetings
 message HelloReply {
   string message = 1;
