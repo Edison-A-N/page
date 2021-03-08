@@ -67,7 +67,6 @@ import (
 ```
 - 端口
 ```
-
 const (
 	port = ":50051"
 )
@@ -78,7 +77,6 @@ const (
 type server struct {
 	pb.UnimplementedGreeterServer
 }
-
 // SayHello implements helloworld.GreeterServer
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 	log.Printf("Received: %v", in.GetName())
@@ -98,7 +96,6 @@ func main() {
 		log.Fatalf("failed to serve: %v", err)
 	}
 }
-
 ```
 
 #### client文件
@@ -106,7 +103,6 @@ func main() {
 ```
 // Package main implements a client for Greeter service.
 package main
-
 import (
 	"context"
 	"log"
@@ -116,7 +112,6 @@ import (
 	"google.golang.org/grpc"
 	pb "google.golang.org/grpc/examples/helloworld/helloworld"
 )
-
 const (
 	address     = "localhost:50051"
 	defaultName = "world"
@@ -132,7 +127,6 @@ func main() {
 	}
 	defer conn.Close()
 	c := pb.NewGreeterClient(conn)
-
 	// Contact the server and print out its response.
 	name := defaultName
 	if len(os.Args) > 1 {
