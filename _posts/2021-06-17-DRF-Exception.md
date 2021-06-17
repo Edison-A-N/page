@@ -69,6 +69,7 @@ class ValidationError(APIException):
 ```ValidationError```会强制将最后的值转换为```list```类型，这是考虑到一个```field```可能有多条不同的错误需要累积。
 
 - 序列化报错处理
+
 ```python
 #rest_framework.serializers 323-346
 def as_serializer_error(exc):
@@ -95,7 +96,7 @@ def as_serializer_error(exc):
     return {
         api_settings.NON_FIELD_ERRORS_KEY: [detail]
     }
-``` 
+```
 ```serializers```中的```run_validation```序列化报错的过程中，会给没有列出具体字段错误的```detail```信息，即不是```dict```格式的信息，带上一个```non_field_errors```的key来标准化。
 
 ### 推荐方案
