@@ -66,7 +66,7 @@ class ValidationError(APIException):
 
         self.detail = _get_error_details(detail, code)
 ```
-```ValidationError```会强制将最后的值转换为```list```类型，这是考虑到一个```field```可能有多条不同的错误需要累积。
+对于```ValidationError```错误，会强制将最后的值转换为```list```类型，这是考虑到一个```field```可能有多条不同的错误需要累积。
 
 - 序列化报错处理
 
