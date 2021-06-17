@@ -97,7 +97,7 @@ def as_serializer_error(exc):
         api_settings.NON_FIELD_ERRORS_KEY: [detail]
     }
 ```
-```serializers```中的```run_validation```序列化报错的过程中，会给没有列出具体字段错误的```detail```信息，即不是```dict```格式的信息，带上一个```non_field_errors```的key来标准化。
+drf中的序列化器```serializers```，在运行```run_validation```序列化报错的过程中，会给没有列出具体字段错误的```detail```信息，即不是```dict```格式的信息，带上一个```non_field_errors```的key来标准化。
 
 ### 推荐方案
 - 非400报错
